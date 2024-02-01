@@ -1,12 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, } from '@angular/forms';
+import { FormControl, FormGroup, FormBuilder } from '@angular/forms';  // Agregué FormBuilder
+import { ReactiveFormsModule } from '@angular/forms';
+
 import { clientes } from 'src/app/models/clientes-model';
 import { ClientesService } from 'src/app/service/clientes.service';
 
 @Component({
   selector: 'app-clientes',
   templateUrl: './clientes.component.html',
-  styleUrls: ['./clientes.component.css']
+  styleUrls: ['./clientes.component.css'],
+  providers: [ReactiveFormsModule] 
 })
 
 export class ClientesComponent implements OnInit {
